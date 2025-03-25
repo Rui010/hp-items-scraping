@@ -20,18 +20,18 @@ hp-items-scraping/
 │ ├── config.py # 定数、設定値（BASE_URL、ページ数、ディレクトリパス等）
 │ ├── scraper/ # スクレイピング処理用サブパッケージ
 │ │ ├── init.py
-│ │ ├── base.py # 共通スクレイピングロジック（セッション管理、リトライ処理等）
-│ │ ├── news.py # ニュース関連のスクレイピング処理
-│ │ ├── products.py # プロダクト関連のスクレイピング処理
-│ │ └── awards.py # アワード関連のスクレイピング処理
+│ │ └── base.py # 共通スクレイピングロジック（セッション管理、リトライ処理等）
+│ ├── sites/
+│ │ ├── init.py
+│ │ └── template.py # 固有スクレイピングロジックのテンプレートファイル
 │ └── utils/ # 汎用ユーティリティモジュール
-│ ├── init.py
-│ ├── file_handler.py # CSV 出力、ファイル操作、ディレクトリ作成処理
-│ └── downloader.py # 画像・PDF のダウンロード処理
-├── tests/ # ユニットテスト、統合テスト用コード
-│ ├── init.py
-│ ├── test_scraper.py # scraper/ 各モジュールのテスト
-│ └── test_utils.py # utils/ 各モジュールのテスト
+│ │ ├── init.py
+│ │ ├── file_handler.py # CSV 出力、ファイル操作、ディレクトリ作成処理
+│ │ └── downloader.py # 画像・PDF のダウンロード処理
+├─├── tests/ # ユニットテスト、統合テスト用コード
+│ │ ├──init.py
+│ │ ├──test_scraper.py # scraper/ 各モジュールのテスト
+│ │ └── test_utils.py # utils/ 各モジュールのテスト
 ├── data/ # 取得したデータおよびダウンロードファイルの保存先（.gitignore 対象推奨） │ ├── news/
 │ ├── products/
 │ └── awards/
@@ -81,8 +81,7 @@ hp-items-scraping/
   - 各サイトの固有の処理
 - **ファイル命名規則:**
   - 社名-カテゴリ名.py
-- **機能:**
-  -
+- ## **機能:**
 
 ## 5. エラーハンドリングとログ出力
 
