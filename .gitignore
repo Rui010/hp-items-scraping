@@ -1,0 +1,32 @@
+# 仮想環境
+venv/
+.venv/
+
+# Pythonキャッシュファイル
+__pycache__/
+*.py[cod]
+*$py.class
+
+# スクレイピングや生成されたデータ
+data/
+
+# ログファイル（もしあれば）
+*.log
+
+# OS固有のファイル
+.DS_Store
+Thumbs.db
+
+# IDE/エディタの設定ファイル（例: VSCode）
+.vscode/
+
+# その他ビルドや配布関連
+build/
+dist/
+*.egg-info/
+
+# hp_items_scraping/sites/内の全ファイルを無視
+hp_items_scraping/sites/*
+
+# ただし、template.py は追跡対象にする
+!hp_items_scraping/sites/template.py
